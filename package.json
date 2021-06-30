@@ -5,5 +5,14 @@
   "main": "index.js",
   "repository": "git@github.com:LucasMathW/questions-and-answers-platform.git",
   "author": "matheus <lucasag0408@outlook.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon ./src/index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.9"
+  }
 }
