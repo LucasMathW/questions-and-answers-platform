@@ -1,20 +1,17 @@
 import express from 'express'
 const app = express();
 const PORT = 3333;
-app.set('view engine', 'ejs') 
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
-app.get('/:nome/:lang', (request, response)=>{
-  var nome = request.params.nome
-  var lang = request.params.lang
-  var msgError = false
-  response.render('index', {
-    nome: nome,
-    lang: lang,
-    empresa: 'Alencar LTDA',
-    msg: msgError
-  })
+app.get('/', (request, response) => {
+  response.render('index')
 })
 
-app.listen(PORT, ()=>{
-  console.log(`Server running on  ${PORT}`)
+app.get('/to-ask', (request, response)=>{
+  response.render('to-ask')
+})
+
+app.listen(PORT, () => {
+  console.log(`Server running on ${PORT}`)
 })
