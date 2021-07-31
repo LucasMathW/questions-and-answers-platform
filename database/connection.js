@@ -1,6 +1,6 @@
 import Sequilize from 'sequelize';
 
-const connection = new Sequilize('questionsguides', 'root', 'R00tP@ssw04d', {
+const connection = new Sequilize('questionsguide', 'root', 'R00tP@ssw04d', {
   host: 'localhost',
   dialect : 'mariadb'
 });
