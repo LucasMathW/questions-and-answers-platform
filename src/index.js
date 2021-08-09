@@ -28,7 +28,6 @@ app.get('/', (request, response) => {
 app.get('/question/:id', (request, response) => {
   const id = request.params.id
   Question.findOne({ where : { id : id }}).then(question => {
-
      if(question !== undefined){
        Answer.findAll({
          where : {  questionId : question.id  },
